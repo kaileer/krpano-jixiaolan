@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>家卫新永艺术馆</title>
+	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<meta http-equiv="x-ua-compatible" content="IE=edge" />
+	<script src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/iscroll-zoom.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/n.css">
+	<style>
+		@-ms-viewport { width: device-width; }
+		@media only screen and (min-device-width: 800px) { html { overflow:hidden; } }
+		html { height:100%; }
+		body { height:100%; overflow:hidden; margin:0; padding:0; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#FFFFFF; background-color:#000000; }
+	</style>
+</head>
+<body onload="scrollWrap()">
+
+<!-- loading：start -->
+<div id="load"><span class="percent"><div><br>Loading<em>...</em></div></span></div>
+<!-- loading：end -->
+
+<script src="tour.js"></script>
+<div class='wrapper' id='wrapper'>
+	<!-- <div class="step1">
+		<span class="amt"></span>
+	</div> -->
+	<div id="pano" style="width:100%;height:100%;">
+		<noscript><table style="width:100%;height:100%;"><tr style="valign:middle;"><td><div style="text-align:center;">ERROR:<br/><br/>Javascript not activated<br/><br/></div></td></tr></table></noscript>
+		<script>
+			embedpano({swf:"tour.swf", xml:"tour.xml", target:"pano", html5:"auto", passQueryParameters:true});
+		</script>
+	</div>
+</div>
+<div class="poplayer">
+	<div class="pop1 pop">
+		<em><img src="images/hot/hot7.jpg" alt=""></em>
+		<div><h3>柳财顺</h3><span>1977 年生，毕业于福建师范大学。现为中国工笔画学会会员，福建省美术家协会会员， 福建省工笔画学会理事，福建省花鸟画学会理事，闽南工笔画院副秘书长，东山画院画师。</span></div>
+		<ul>
+			<li></li>
+			<li class="pop_btn_shop"></li>
+		</ul>
+	</div>
+</div>
+<div class="music c3_rotate_360"></div>
+<audio class="bgSound" src="images/backgroundmusic.mp3" preload="auto"></audio>
+<a href="list.html" class="link_ps"><img src="images/btn_list2.png" alt=""></a>
+<script src="js/nlayer.js"></script>
+</body>
+</html>
