@@ -1,0 +1,358 @@
+<krpano version="1.16" title="家卫新永艺术馆" onstart="startup();">
+
+	<!--重力感应-->
+    <plugin name="gyro" devices="html5" url="plugins/gyro.js" keep="true" enabled="true" camroll="true" friction="0.5"
+            velastic="0.2" vrelative="false" onavailable=""/>
+            
+	<include url="skin/vtourskin.xml" />
+
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               controlbar_offset="20"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="" scale="0.25" opened_onclick="openurl('...',_blank);" />
+
+
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+	
+	<scene name="scene_01" title="01" onstart="" thumburl="panos/01.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="127" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/01.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/01.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/01.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/01.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/01.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+	</scene>
+
+	<scene name="scene_02" title="02" onstart="" thumburl="panos/02.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="90" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/02.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/02.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/02.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/02.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/02.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot0" style="hotspotstyle" url="images/icon1.png" ath="67" atv="5" onclick="js(xmlcallback(get(name)));" />
+	
+	</scene>
+
+	<scene name="scene_03" title="03" onstart="" thumburl="panos/03.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="90" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/03.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/03.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/03.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/03.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/03.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot1" style="hotspotstyle" url="images/icon1.png" ath="-8" atv="5" onclick="js(xmlcallback(get(name)));" />
+	
+	</scene>
+
+	<scene name="scene_04" title="04" onstart="" thumburl="panos/04.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="-140" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/04.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/04.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/04.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/04.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/04.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+	</scene>
+
+	<scene name="scene_05" title="05" onstart="" thumburl="panos/05.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="-145" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/05.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/05.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/05.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/05.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/05.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot2" style="hotspotstyle" url="images/icon1.png" ath="85" atv="10" onclick="js(xmlcallback(get(name)));" />
+	
+	</scene>
+
+	<scene name="scene_06" title="06" onstart="" thumburl="panos/06.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="-50" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/06.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/06.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/06.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/06.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/06.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+	</scene>
+
+	<scene name="scene_07" title="07" onstart="" thumburl="panos/07.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="95" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/07.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/07.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/07.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/07.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/07.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot3" style="hotspotstyle" url="images/icon1.png" ath="66" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot4" style="hotspotstyle" url="images/icon1.png" ath="75" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot5" style="hotspotstyle" url="images/icon1.png" ath="100" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot6" style="hotspotstyle" url="images/icon1.png" ath="110" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot7" style="hotspotstyle" url="images/icon1.png" ath="-120" atv="8" onclick="js(xmlcallback(get(name)));" />
+	
+	</scene>
+
+	<scene name="scene_08" title="08" onstart="" thumburl="panos/08.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="174" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/08.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/08.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/08.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/08.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/08.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot8" style="hotspotstyle" url="images/icon1.png" ath="128" atv="-22" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot9" style="hotspotstyle" url="images/icon1.png" ath="137" atv="-19" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot10" style="hotspotstyle" url="images/icon1.png" ath="150" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot11" style="hotspotstyle" url="images/icon1.png" ath="158" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot12" style="hotspotstyle" url="images/icon1.png" ath="167" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot13" style="hotspotstyle" url="images/icon1.png" ath="177" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot14" style="hotspotstyle" url="images/icon1.png" ath="187" atv="5" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot15" style="hotspotstyle" url="images/icon1.png" ath="197" atv="5" onclick="js(xmlcallback(get(name)));" />
+	
+	</scene>
+
+	<scene name="scene_09" title="09" onstart="" thumburl="panos/09.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="-55" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/09.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/09.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/09.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/09.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/09.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+		<!-- 详情热点 -->
+		<hotspot name="spot16" style="hotspotstyle" url="images/icon1.png" ath="10" atv="-22" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot17" style="hotspotstyle" url="images/icon1.png" ath="70" atv="-22" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot18" style="hotspotstyle" url="images/icon1.png" ath="100" atv="-12" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot19" style="hotspotstyle" url="images/icon1.png" ath="156" atv="-13" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot20" style="hotspotstyle" url="images/icon1.png" ath="122" atv="-9" onclick="js(xmlcallback(get(name)));" />
+		<!-- <hotspot name="spot25" style="hotspotstyle" url="images/icon1.png" ath="-55" atv="8" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot26" style="hotspotstyle" url="images/icon1.png" ath="-175" atv="9" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot27" style="hotspotstyle" url="images/icon1.png" ath="-193" atv="9" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot28" style="hotspotstyle" url="images/icon1.png" ath="-110" atv="12" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot29" style="hotspotstyle" url="images/icon1.png" ath="-95" atv="8" onclick="js(xmlcallback(get(name)));" /> -->
+	
+	</scene>
+
+	<scene name="scene_10" title="10" onstart="" thumburl="panos/10.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+		<view hlookat="-55" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+	
+		<preview url="panos/10.tiles/preview.jpg" />
+	
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/10.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/10.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/10.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/10.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+	
+		<!-- place your scene hotspots here -->
+	
+	</scene>
+
+	<scene name="scene_11" title="11" onstart="" thumburl="panos/11.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-90" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/11.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="1910" tiledimageheight="1910">
+				<cube url="panos/11.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="955" tiledimageheight="955">
+				<cube url="panos/11.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/11.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/11.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+
+		<!-- 详情热点 -->
+		<hotspot name="spot21" style="hotspotstyle" url="images/icon1.png" ath="-38" atv="0" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot22" style="hotspotstyle" url="images/icon1.png" ath="3" atv="-15" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot23" style="hotspotstyle" url="images/icon1.png" ath="3" atv="0" onclick="js(xmlcallback(get(name)));" />
+		<hotspot name="spot24" style="hotspotstyle" url="images/icon1.png" ath="-20" atv="22" onclick="js(xmlcallback(get(name)));" />
+		<!-- <hotspot name="spot30" style="hotspotstyle" url="images/icon1.png" ath="36" atv="8" onclick="js(xmlcallback(get(name)));" /> -->
+
+	</scene>
+
+
+</krpano>
